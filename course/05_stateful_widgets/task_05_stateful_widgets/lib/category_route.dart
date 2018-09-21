@@ -17,11 +17,18 @@ final _backgroundColor = Colors.green[100];
 /// While it is named CategoryRoute, a more apt name would be CategoryScreen,
 /// because it is responsible for the UI at the route's destination.
 // TODO: Make CategoryRoute a StatefulWidget
-class CategoryRoute extends StatelessWidget {
-  const CategoryRoute();
+class CategoryRoute extends StatefulWidget {
+//  const CategoryRoute();
 
   // TODO: Create State object for the CategoryRoute
 
+  @override
+  createState()=> _CategoryRoute();
+
+
+}
+
+class _CategoryRoute extends State<CategoryRoute>{
   static const _categoryNames = <String>[
     'Length',
     'Area',
@@ -66,7 +73,10 @@ class CategoryRoute extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
+
+
     // TODO: Instead of re-creating a list of Categories in every build(),
     // save this as a variable inside the State object and create
     // the list at initialization (in initState()).
@@ -106,5 +116,7 @@ class CategoryRoute extends StatelessWidget {
       appBar: appBar,
       body: listView,
     );
+
   }
-}
+
+  }
