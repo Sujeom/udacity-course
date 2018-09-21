@@ -35,7 +35,7 @@ class Category extends StatelessWidget {
         child: InkWell(
           onTap: () {
             print("I was tapped");
-            void _navigator
+
           },
           borderRadius: BorderRadius.all(Radius.elliptical(50.0, 50.0)),
           splashColor: color,
